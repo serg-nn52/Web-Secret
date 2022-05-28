@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Web-Secret/static/css/main.6ec691f0.css",
-    "main.js": "/Web-Secret/static/js/main.3ef43b54.js",
+    "main.js": "/Web-Secret/static/js/main.79cf0603.js",
     "static/media/loader.gif": "/Web-Secret/static/media/loader.2187296e5d399b5c8373.gif",
     "index.html": "/Web-Secret/index.html",
     "main.6ec691f0.css.map": "/Web-Secret/static/css/main.6ec691f0.css.map",
-    "main.3ef43b54.js.map": "/Web-Secret/static/js/main.3ef43b54.js.map"
+    "main.79cf0603.js.map": "/Web-Secret/static/js/main.79cf0603.js.map"
   },
   "entrypoints": [
     "static/css/main.6ec691f0.css",
-    "static/js/main.3ef43b54.js"
+    "static/js/main.79cf0603.js"
   ]
 }
