@@ -1,0 +1,11 @@
+@import 'normalize';
+@import 'fonts';
+@import 'colors';
+
+body {
+  margin: 0;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bc-color;
+}
