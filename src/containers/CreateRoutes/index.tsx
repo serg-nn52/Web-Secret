@@ -1,11 +1,16 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import MainPage from '../../pages/MainPage';
+import Error404 from '../../pages/Error404/Error404';
+import MainPage from '../../pages/MainPage/MainPage';
+import PageWrapper from '../PageWrapper';
 
 const CreateRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
+      <Route path="/" element={<PageWrapper />}>
+        <Route path="/" element={<MainPage />} />
+        <Route path="*" element={<Error404 />} />
+      </Route>
     </Routes>
   );
 };
