@@ -1,12 +1,24 @@
 @import 'normalize';
 @import 'fonts';
 @import 'colors';
+@import 'media';
 
 body {
   margin: 0;
   padding: 0;
   font-family: $main-font;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $bc-color;
+  //убираю стрелочки у input type='number'
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 }

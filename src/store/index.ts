@@ -9,15 +9,17 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-
 import storage from 'redux-persist/lib/storage';
+import productsReducer from './products/slice';
 
 const persistConfig = {
   key: 'root',
   storage,
 };
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  products: productsReducer,
+});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
