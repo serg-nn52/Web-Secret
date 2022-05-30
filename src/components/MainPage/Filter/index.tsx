@@ -20,7 +20,6 @@ const Filter: React.FC = () => {
       e.target.value = e.target.value
         .replace(/[^0-9]/g, '')
         .replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-      console.log(e.target.name, e.target.value.split(' ').join(''));
     } else {
       e.target.value = e.target.value.slice(0, -1);
     }

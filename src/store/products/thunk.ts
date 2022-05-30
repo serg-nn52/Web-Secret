@@ -18,7 +18,6 @@ export const getProducts = createAsyncThunk(
           inStock: el.in_stock,
         };
       });
-      console.log(response.data.products);
       return products;
     } catch (error: any) {
       return rejectWithValue(error);
@@ -48,7 +47,6 @@ export const getProductsFiltred = createAsyncThunk(
         } else {
           url += '';
         }
-        console.log(params);
         return url;
       };
       const urlFilterReq = getUrlFilterReq();
