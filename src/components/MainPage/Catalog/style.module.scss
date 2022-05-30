@@ -1,3 +1,13 @@
 .catalog {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex: 0 3 calc(1306px - 24px - 242px);
   width: calc(1306px - 24px - 242px);
+  column-gap: 24px;
+  li {
+    list-style: none;
+  }
 }

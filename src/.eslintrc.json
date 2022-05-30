@@ -45,7 +45,7 @@
     "react/require-default-props": "off",
     "no-unused-vars": "warn",
     "import/prefer-default-export": "off",
-    "no-console": "off",
+    "no-console": "warn",
     "no-param-reassign": [2, { "props": false }],
     "no-unused-expressions": "off"
   }
