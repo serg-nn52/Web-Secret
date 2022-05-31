@@ -10,9 +10,12 @@ import style from './style.module.scss';
 
 const Filter: React.FC = () => {
   const dispatch = useAppDispatch();
-  const checkedInStore = useAppSelector(getFilterState);
   const quantityProdacts = useAppSelector(getQuantityProducts);
   const filterInStore = useAppSelector(getFilterState);
+
+  useEffect(() => {
+    dispatch(getProductsFiltred(filterInStore));
+  }, [filterInStore, dispatch]);
 
   const changeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const pattern: RegExp = /^[0-9\s]+$/;
@@ -31,8 +34,7 @@ const Filter: React.FC = () => {
     );
   };
 
-  const isChecked = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    e.preventDefault();
+  const checked = (e: React.ChangeEvent<HTMLInputElement>): void => {
     dispatch(
       setBrandFilter({
         name: e.target.name,
@@ -40,10 +42,6 @@ const Filter: React.FC = () => {
       }),
     );
   };
-
-  useEffect(() => {
-    dispatch(getProductsFiltred(checkedInStore));
-  }, [checkedInStore, dispatch]);
 
   return (
     <div className={style.filter}>
@@ -73,14 +71,14 @@ const Filter: React.FC = () => {
         <Checkbox
           name="canon"
           title="Canon"
-          isChecked={isChecked}
-          checkInPast={checkedInStore!.canon}
+          checked={checked}
+          isChecked={filterInStore.canon}
         />
         <Checkbox
           name="nikon"
           title="Nikon"
-          isChecked={isChecked}
-          checkInPast={checkedInStore!.nikon}
+          checked={checked}
+          isChecked={filterInStore.nikon}
         />
       </form>
     </div>

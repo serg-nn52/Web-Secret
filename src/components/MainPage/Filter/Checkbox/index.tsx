@@ -1,21 +1,20 @@
 import React from 'react';
-// import bird from 'assets/icons/bird.png';
 import birdAlt from 'assets/icons/bird_alt.svg';
 import style from './style.module.scss';
 
 interface ICheckboxProps {
   name: string;
   title: string;
-  checkInPast: boolean;
+  isChecked: boolean;
   // eslint-disable-next-line no-unused-vars
-  isChecked: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  checked: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Checkbox: React.FC<ICheckboxProps> = ({
   name,
-  isChecked,
+  checked,
   title,
-  checkInPast,
+  isChecked,
 }) => {
   return (
     <div className={style.check}>
@@ -23,8 +22,8 @@ const Checkbox: React.FC<ICheckboxProps> = ({
         <input
           type="checkbox"
           name={name}
-          onChange={isChecked}
-          checked={checkInPast}
+          onChange={checked}
+          checked={isChecked}
         />
         <img src={birdAlt} alt="checked" />
       </div>

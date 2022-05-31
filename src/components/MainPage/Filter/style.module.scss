@@ -2,7 +2,7 @@
 @import 'styles/media';
 .filter {
   display: flex;
-  flex: 0 1 242px;
+  flex: 0 0 242px;
   width: 242px;
   flex-direction: column;
   @include media-breakpoint-down(sm) {
