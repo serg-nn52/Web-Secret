@@ -11,6 +11,7 @@
   @include media-breakpoint-down(sm) {
     column-gap: 0;
     position: relative;
+    flex-basis: 0;
     left: -20px;
     width: calc(100% + 40px) !important;
   }
