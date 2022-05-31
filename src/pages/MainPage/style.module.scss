@@ -4,3 +4,11 @@
   height: 100%;
   width: 100%;
 }
+@media (max-width: 816px) {
+  .main {
+    flex-direction: column;
+    justify-content: start;
+    flex-grow: 0;
+    gap: 0;
+  }
+}

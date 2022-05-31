@@ -1,5 +1,6 @@
 import React from 'react';
-import bird from 'assets/icons/bird.png';
+// import bird from 'assets/icons/bird.png';
+import birdAlt from 'assets/icons/bird_alt.svg';
 import style from './style.module.scss';
 
 interface ICheckboxProps {
@@ -25,7 +26,7 @@ const Checkbox: React.FC<ICheckboxProps> = ({
           onChange={isChecked}
           checked={checkInPast}
         />
-        <img src={bird} alt="checked" />
+        <img src={birdAlt} alt="checked" />
       </div>
       <p>{title}</p>
     </div>

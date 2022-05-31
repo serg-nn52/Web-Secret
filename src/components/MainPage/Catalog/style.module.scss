@@ -1,3 +1,4 @@
+@import 'styles/media';
 .catalog {
   padding: 0;
   display: flex;
@@ -7,7 +8,24 @@
   flex: 0 3 calc(1306px - 24px - 242px);
   width: calc(1306px - 24px - 242px);
   column-gap: 24px;
+  @include media-breakpoint-down(sm) {
+    column-gap: 0;
+    position: relative;
+    left: -20px;
+    width: calc(100% + 40px) !important;
+  }
   li {
     list-style: none;
+  }
+}
+
+@media (max-width: 816px) {
+  .catalog {
+    width: 100%;
+  }
+}
+@media (max-width: 605px) {
+  .catalog {
+    column-gap: 15px;
   }
 }

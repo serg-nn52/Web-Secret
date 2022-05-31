@@ -1,16 +1,31 @@
 @import 'styles/colors.scss';
+@import 'styles/media';
 .filter {
+  display: flex;
   flex: 0 1 242px;
   width: 242px;
+  flex-direction: column;
+  @include media-breakpoint-down(sm) {
+    width: 224px;
+    margin-bottom: 4px;
+  }
   .quont {
     color: $second-color;
     margin-bottom: 5px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 18px;
+    }
   }
   h1 {
     font-weight: 700;
     font-size: 32px;
     color: $first-color;
     margin-bottom: 13px;
+    @include media-breakpoint-down(sm) {
+      order: -1;
+      font-size: 26px;
+      margin-bottom: 24px;
+    }
   }
   .price {
     font-weight: 700;
@@ -21,5 +36,8 @@
   .inputs {
     display: flex;
     margin-bottom: 24px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 14px;
+    }
   }
 }

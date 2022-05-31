@@ -1,6 +1,13 @@
+@import 'styles/media';
 .wrapper {
   max-width: 1386px;
   margin: 0 auto;
   padding: 64px 40px;
   min-height: 100vh;
+}
+
+@media (max-width: 605px) {
+  .wrapper {
+    padding: 47px 20px;
+  }
 }

@@ -1,6 +1,16 @@
 @import 'styles/colors';
+@import 'styles/media';
 li {
   margin-bottom: 24px;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-bottom: 0;
+    &:last-child {
+      .wrapper {
+        border: none;
+      }
+    }
+  }
 }
 .wrapper {
   display: flex;
@@ -12,17 +22,40 @@ li {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
   .img {
     width: 100%;
     max-height: 242px;
     height: 242px;
     position: relative;
-    background-image: url('../../../../assets/img/no_photo.jpeg');
+    background: url('../../../../assets/img/no_photo.jpeg') center
+      (center / cover) no-repeat;
+    @include media-breakpoint-down(sm) {
+      width: 124px;
+      height: 124px;
+      flex-wrap: nowrap;
+    }
+    .new {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include media-breakpoint-down(sm) {
+        width: 124px;
+        height: 124px;
+      }
     }
     .new {
       position: absolute;
@@ -44,6 +77,10 @@ li {
     padding: 16px;
     padding-top: 12px;
     width: 100%;
+    @include media-breakpoint-down(sm) {
+      width: calc(100% - 124px);
+      padding: 0 0 0 16px;
+    }
     .title {
       font-weight: 500;
       font-size: 14px;
@@ -51,6 +88,9 @@ li {
       color: $first-color;
       height: 40px;
       margin-bottom: 11px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 11px;
+      }
     }
     .character {
       display: flex;
@@ -58,6 +98,9 @@ li {
       align-items: center;
       width: 100%;
       margin-bottom: 18px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 16px;
+      }
       .price {
         font-weight: 700;
         font-size: 16px;
@@ -97,5 +140,11 @@ li {
         height: 19px;
       }
     }
+  }
+}
+
+@media (max-width: 327px) {
+  .description {
+    padding: 0px 0 0 9px !important;
   }
 }
